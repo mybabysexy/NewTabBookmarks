@@ -1,0 +1,307 @@
+h1,h2,h3,label,span
+{
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+.pd-0
+{
+	padding: 0 !important;
+}
+
+.pd-5
+{
+	padding: 5px !important;
+}
+.pd-10
+{
+	padding: 10px !important;
+}
+.pdl-5
+{
+	padding-left: 5px !important;
+}
+.pdl-10
+{
+	padding-left: 10px !important;
+}
+.pdr-0
+{
+	padding-right: 0px !important;
+}
+.pdr-5
+{
+	padding-right: 5px !important;
+}
+.pdr-10
+{
+	padding-right: 10px !important;
+}
+.pdt-5
+{
+	padding-top: 5px !important;
+}
+.pdt-10
+{
+	padding-top: 10px !important;
+}
+.pdb-5
+{
+	padding-bottom: 5px !important;
+}
+.pdb-10
+{
+	padding-bottom: 10px !important;
+}
+
+.mg-0
+{
+	margin: 0px !important;
+}
+.mg-5
+{
+	margin: 5px !important;
+}
+.mg-10
+{
+	margin: 10px !important;
+}
+.mgl-5
+{
+	margin-left: 5px !important;
+}
+.mgl-10
+{
+	margin-left: 10px !important;
+}
+.mgr-5
+{
+	margin-right: 5px !important;
+}
+.mgr-10
+{
+	margin-right: 10px !important;
+}
+.mgt-0
+{
+	margin-top: 0px !important;
+}
+.mgt-5
+{
+	margin-top: 5px !important;
+}
+.mgt-7
+{
+	margin-top: 7px !important;
+}
+.mgt-10
+{
+	margin-top: 10px !important;
+}
+.mgt-20
+{
+	margin-top: 20px !important;
+}
+.mgt-30
+{
+	margin-top: 30px !important;
+}
+.mgb-5
+{
+	margin-bottom: 5px !important;
+}
+.mgb-10
+{
+	margin-bottom: 10px !important;
+}
+
+.cblue
+{
+	color: blue;
+}
+.cpink
+{
+	color: pink;
+}
+.chotpink
+{
+	color: hotpink;
+}
+.cred
+{
+	color: red;
+}
+.cyellow
+{
+	color: yellow;
+}
+.ccyan
+{
+	color: cyan;
+}
+.cgreen
+{
+	color: green;
+}
+.cbrown
+{
+	color: brown;
+}
+.clightgrey
+{
+	color: lightgrey;
+}
+.cnavy
+{
+	color: navy;
+}
+.cblack
+{
+	color: black;
+}
+.cwhite
+{
+	color: white;
+}
+
+.bgblue
+{
+	background-color: blue;
+}
+.bgpink
+{
+	background-color: pink;
+}
+.bghotpink
+{
+	background-color: hotpink;
+}
+.bgred
+{
+	background-color: red;
+}
+.bgyellow
+{
+	background-color: yellow;
+}
+.bgcyan
+{
+	background-color: cyan;
+}
+.bggreen
+{
+	background-color: green;
+}
+.bgbrown
+{
+	background-color: brown;
+}
+.bglightgrey
+{
+	background-color: lightgrey;
+}
+.bglightgray
+{
+	background-color: lightgray;
+}
+.bgnavy
+{
+	background-color: navy;
+}
+.bgblack
+{
+	background-color: black;
+}
+.bgwhite
+{
+	background-color: white;
+}
+
+.flex1
+{
+	display: flex;
+	align-items: center;
+}
+
+.flex2
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.textnodecor
+{
+	text-decoration: none;
+}
+
+.block
+{
+	display: block;
+}
+
+.hidden
+{
+	display: none;
+}
+
+.fullBody
+{
+	margin: 0;
+	padding: 0;
+}
+
+.fullPage
+{
+	width: 100%;
+	height: 100vh;
+}
+
+.fullSize
+{
+	width: 100%;
+	height: 100%;
+}
+
+.fullWidth
+{
+	width: 100%;
+}
+
+.floatLeft
+{
+	float: left;
+}
+
+.floatRight
+{
+	float: right;
+}
+
+.oneThird
+{
+	width: 33.33%;
+}
+
+.text-center
+{
+	text-align: center;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+
+.clear-both
+{
+	clear: both;
+}
+
+.scale15
+{
+	transform: scale(1.5);
+}
+
+a:hover {
+	cursor: pointer !important;
+}
