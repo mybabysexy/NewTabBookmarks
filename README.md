@@ -1,7 +1,7 @@
 # NewTabBookmarks
 Bookmark on new tab page made by @duc1607.
 
-This ultilizes the browser's localStorage.
+This ultilizes the browser's Local Storage.
 
 ## Installation
 No need, just run index.html and you are good to go!
