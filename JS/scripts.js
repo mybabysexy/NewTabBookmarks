@@ -53,17 +53,23 @@ $(function() {
 			$('div [elem-id=' + id + ']').parent().remove();
 		},250);
 	});
+
+	$('.element').click(function() {
+		$('#loader').show();
+	});
 });
 
 function addElem(id,icon,link,name) {
-	var element = '<a href="'+link+'">\
-					<div class="element">\
-						<img src="'+icon+'" class="siteIcon">\
-						<div>\
-							<h3>'+name+'</h3>\
+	var element = '	<a href="'+link+'">\
+						<div class="element">\
+							<div class="element-inside">\
+								<img src="'+icon+'" class="siteIcon">\
+								<div>\
+									<h3>'+name+'</h3>\
+								</div>\
+								<a href="" class="deleteElem" elem-id="'+ id +'"></a>\
+							</div>\
 						</div>\
-						<a href="" class="deleteElem" elem-id="'+ id +'"></a>\
-					</div>\
 					</a>';
-	$('#main').prepend(element);
+	$('#content').prepend(element);
 }
