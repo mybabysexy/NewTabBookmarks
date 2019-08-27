@@ -16,6 +16,33 @@ $(function() {
 		addElem(id,icon, link, name);
 	});
 
+	if (localStorage.checkOutTime == undefined) {
+		let checkOutTime = new Date();
+		checkOutTime.setHours(0);
+		checkOutTime.setMinutes(0);
+		checkOutTime.setSeconds(0);
+		localStorage.checkOutTime = checkOutTime;
+	}
+
+	let checkinTime = new Date(localStorage.checkinTime);
+	let checkOutTime = new Date(localStorage.checkOutTime);
+	if(checkOutTime.getDay() < new Date().getDay()) {
+		checkinTime = new Date();
+		checkinTime.setHours(0);
+		checkinTime.setMinutes(0);
+		checkinTime.setSeconds(0);
+		localStorage.checkinTime = checkinTime;
+
+		checkOutTime = new Date();
+		checkOutTime.setHours(0);
+		checkOutTime.setMinutes(0);
+		checkOutTime.setSeconds(0);
+		localStorage.checkOutTime = checkOutTime;
+	}
+
+	$('input[type=time]').val((checkinTime.getHours()<10?"0"+checkinTime.getHours():checkinTime.getHours())+":"+checkinTime.getMinutes());
+	$('.checkoutTime').text(checkOutTime.getHours()+":"+checkOutTime.getMinutes());
+
 	//add event listener for the Add button
 	$('.addBtn').click(function () {
 		const pattern = /((https?:\/\/)?[a-zA-Z0-9.]+)/gm;
@@ -54,9 +81,38 @@ $(function() {
 		},250);
 	});
 
-	$('.element').click(function() {
+	$('#content a').click(function() {
 		$('#loader').show();
 	});
+
+	$('.checkinBtn').click(function() {
+		let checkinTime = $('input[type=time]').val();
+		if($('input[type=time]').val() != "") {
+			let checkinTimeArray = checkinTime.split(':');
+			checkinTime = new Date();
+
+			checkinTime.setHours(checkinTimeArray[0]);
+			checkinTime.setMinutes(checkinTimeArray[1]);
+			console.log("in:" + checkinTime);
+			let checkOutTime = new Date();
+			checkOutTime.setHours(0);
+			checkOutTime.setMinutes(0);
+			checkOutTime.setSeconds(0);
+
+			if(checkinTime.getHours() < 9) {
+				checkOutTime.setHours(checkinTime.getHours()+9);
+				checkOutTime.setMinutes(checkinTime.getMinutes()+30);
+			}
+			else if(checkinTime.getHours() >= 9) {
+				checkOutTime.setHours(18);
+				checkOutTime.setMinutes(30);
+			}
+			localStorage.checkinTime = checkinTime;
+			localStorage.checkOutTime = checkOutTime;
+
+			$('.checkoutTime').text(checkOutTime.getHours()+":"+checkOutTime.getMinutes());
+		}
+	})
 });
 
 function addElem(id,icon,link,name) {
